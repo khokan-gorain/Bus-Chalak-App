@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "540269245565",
+    "project_id": "nsu-bus-chalak",
+    "storage_bucket": "nsu-bus-chalak.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:540269245565:android:9a20c6a03aa6f4d8132d14",
+        "android_client_info": {
+          "package_name": "com.khokan_gorain_nsubuschalak_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "540269245565-sidfbser59n16a8h5qmr9a6ajd52mb0l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBl104N2Wv98niFLhypDJoIeiADiG8SWuY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "540269245565-sidfbser59n16a8h5qmr9a6ajd52mb0l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

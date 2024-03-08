@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="@color/layout_background"
+    tools:context=".Fragments.ProfileFragment">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginRight="@dimen/dim_10dp"
+        android:layout_marginLeft="@dimen/dim_10dp"
+        android:layout_marginTop="@dimen/dim_30dp"
+        android:layout_marginBottom="@dimen/dim_40dp">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/dim_15dp"
+                android:elevation="@dimen/dim_10dp"
+                tools:ignore="MissingConstraints">
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="@dimen/dim_30dp">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp"
+                        android:background="@color/colorPrimary"/>
+                    <RelativeLayout
+                        android:layout_width="@dimen/dim_100dp"
+                        android:layout_height="@dimen/dim_100dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="@dimen/dim_20dp"
+                        android:layout_marginTop="@dimen/dim_20dp"
+                        android:padding="2dp"
+                        tools:ignore="MissingConstraints">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/dvProfileImg"
+                            android:layout_width="@dimen/dim_120dp"
+                            android:layout_height="@dimen/dim_120dp"
+                            android:layout_gravity="center"
+                            android:padding="@dimen/dim_1dp"
+                            android:src="@drawable/dv_prof"
+                            app:civ_border_color="@color/white"
+                            app:civ_border_width="@dimen/dim_2dp"
+                            tools:ignore="MissingConstraints">
+                        </de.hdodenhof.circleimageview.CircleImageView>
+
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            android:id="@+id/fbAddImgBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:backgroundTint="@color/colorPrimary"
+                            android:src="@drawable/ic_add"
+                            android:tint="@color/white"
+                            app:fabCustomSize="@dimen/dim_35dp" />
+                    </RelativeLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dim_20dp"
+                        android:layout_marginLeft="@dimen/dim_20dp"
+                        android:focusable="true"
+                        app:startIconDrawable="@drawable/ic_user"
+                        android:focusableInTouchMode="true"
+                        tools:ignore="MissingConstraints">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/dvName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:enabled="false"
+                            android:hint="Name"
+                            android:inputType="text"
+                            android:textSize="@dimen/dim_16sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dim_15dp"
+                        android:layout_marginRight="@dimen/dim_20dp"
+                        android:layout_marginLeft="@dimen/dim_20dp"
+                        android:focusable="true"
+                        app:startIconDrawable="@drawable/ic_phone"
+                        android:focusableInTouchMode="true"
+                        tools:ignore="MissingConstraints">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/dvPhoneNo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Phone Number"
+                            android:ems="10"
+                            android:enabled="false"
+                            android:textSize="@dimen/dim_16sp"
+                            android:inputType="number"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dim_15dp"
+                        android:layout_marginRight="@dimen/dim_20dp"
+                        android:layout_marginLeft="@dimen/dim_20dp"
+                        android:focusable="true"
+                        app:startIconDrawable="@drawable/ic_email"
+                        android:focusableInTouchMode="true"
+                        tools:ignore="MissingConstraints">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/dvEmailId"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Email Id"
+                            android:ems="10"
+                            android:textSize="@dimen/dim_16sp"
+                            android:inputType="text"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dim_15dp"
+                        android:layout_marginRight="@dimen/dim_20dp"
+                        android:layout_marginLeft="@dimen/dim_20dp"
+                        android:focusable="true"
+                        app:startIconDrawable="@drawable/ic_location"
+                        android:focusableInTouchMode="true"
+                        tools:ignore="MissingConstraints">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/dvAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Address"
+                            android:ems="10"
+                            android:textSize="@dimen/dim_16sp"
+                            android:inputType="text"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_marginTop="@dimen/dim_30dp"
+                        android:id="@+id/dvProfileUpdateBtn"
+                        android:layout_width="match_parent"
+                        android:layout_marginLeft="@dimen/dim_20dp"
+                        android:layout_marginRight="@dimen/dim_20dp"
+                        android:layout_height="@dimen/dim_50dp"
+                        android:background="@drawable/btn_bg"
+                        android:text="Update Profile"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.cardview.widget.CardView>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</ScrollView>
+
+</FrameLayout>

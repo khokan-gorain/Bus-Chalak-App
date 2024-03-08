@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:title="Home"
+        android:icon="@drawable/ic_home"/>
+
+    <item
+        android:id="@+id/mystatus"
+        android:title="My Status"
+        android:icon="@drawable/ic_ststus_bus"/>
+
+    <item
+        android:id="@+id/profile"
+        android:title="Profile"
+        android:icon="@drawable/ic_user"/>
+    <item
+        android:id="@+id/privacy_policy"
+        android:title="Privacy Policy"
+        android:icon="@drawable/privacy_policy"/>
+
+</menu>
+

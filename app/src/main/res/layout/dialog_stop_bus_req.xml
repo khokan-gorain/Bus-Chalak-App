@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/layout_background">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/dim_10dp"
+        android:elevation="@dimen/dim_10dp"
+        android:layout_margin="@dimen/dim_10dp"
+        tools:ignore="MissingConstraints">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dim_8dp"
+                android:background="@color/colorPrimary"/>
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dim_20dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="@dimen/dim_30dp"
+                    android:layout_height="@dimen/dim_30dp"
+                    android:src="@drawable/ic_notifications"
+                    app:tint="@color/colorPrimary" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dim_10dp"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp"
+                    android:text="NOTIFICATION"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dim_3dp"
+                android:layout_marginTop="@dimen/dim_10dp"
+                android:layout_marginLeft="@dimen/dim_30dp"
+                android:layout_marginRight="@dimen/dim_30dp"
+                android:background="@color/colorPrimary"/>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dim_20dp"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/s_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"/>
+                <TextView
+                    android:id="@+id/s_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Phone Number"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="@dimen/dim_10dp"
+                    android:textSize="20sp"/>
+                <TextView
+                    android:id="@+id/s_msg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dim_10dp"
+                    android:text="Student Msg"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dim_30dp"
+                android:layout_marginTop="@dimen/dim_30dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/yes_btn"
+                    android:layout_width="@dimen/dim_150dp"
+                    android:layout_height="@dimen/dim_45dp"
+                    android:text="Yes"
+                    android:background="@drawable/btn_bg"
+                    android:textColor="@color/black"/>
+
+                <Button
+                    android:id="@+id/no_btn"
+                    android:layout_width="@dimen/dim_150dp"
+                    android:layout_height="@dimen/dim_45dp"
+                    android:layout_marginLeft="@dimen/dim_30dp"
+                    android:text="No"
+                    android:background="@drawable/btn_bg"
+                    android:textColor="@color/black"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

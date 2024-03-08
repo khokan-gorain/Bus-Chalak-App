@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clickable="true"
+    android:background="@color/layout_background"
+    android:focusableInTouchMode="true"
+    android:focusable="true"
+    tools:context=".Fragments.StatusFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardElevation="@dimen/dim_5dp"
+                    app:cardCornerRadius="@dimen/dim_15dp"
+                    android:layout_marginLeft="@dimen/dim_10dp"
+                    android:layout_marginRight="@dimen/dim_10dp"
+                    android:layout_marginTop="@dimen/dim_30dp">
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dim_30dp"
+                        android:orientation="vertical">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dim_8dp"
+                            android:background="@color/colorPrimary"/>
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/busNo"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/dim_20dp"
+                            android:layout_marginLeft="@dimen/dim_20dp"
+                            android:layout_marginTop="@dimen/dim_30dp"
+                            android:focusable="true"
+                            app:startIconDrawable="@drawable/ic_ststus_bus"
+                            android:focusableInTouchMode="true">
+                            <AutoCompleteTextView
+                                android:inputType="number"
+                                android:id="@+id/busNumber"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dim_50dp"
+                                android:hint="Enter your Bus Number "
+                                android:textSize="@dimen/dim_16sp"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/dim_20dp"
+                            android:layout_marginLeft="@dimen/dim_20dp"
+                            android:focusable="true"
+                            app:startIconDrawable="@drawable/ic_location"
+                            android:focusableInTouchMode="true"
+                            android:layout_marginTop="@dimen/dim_15dp">
+                            <AutoCompleteTextView
+                                android:id="@+id/startingPoint"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dim_50dp"
+                                android:hint="From Station"
+                                android:textSize="@dimen/dim_16sp"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/dim_20dp"
+                            android:layout_marginLeft="@dimen/dim_20dp"
+                            android:focusable="true"
+                            app:startIconDrawable="@drawable/ic_location"
+                            android:focusableInTouchMode="true"
+                            android:layout_marginTop="@dimen/dim_15dp">
+                            <AutoCompleteTextView
+                                android:id="@+id/ending_point"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dim_50dp"
+                                android:hint="To Station"
+                                android:textSize="@dimen/dim_16sp"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+                            <androidx.appcompat.widget.SwitchCompat
+                                android:id="@+id/statusSwitch"
+                                android:layout_gravity="center"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:showText="true"
+                                android:thumb="@drawable/switch_thumb"
+                                app:track="@drawable/switch_track_bg"
+                                android:layout_marginTop="@dimen/dim_15dp"/>
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:layout_marginTop="@dimen/dim_10dp"
+                                android:id="@+id/dvLocationUpdateBtn"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dim_50dp"
+                                android:background="@drawable/btn_bg"
+                                android:layout_marginRight="@dimen/dim_20dp"
+                                android:layout_marginLeft="@dimen/dim_20dp"
+                                android:text="Start Journey"/>
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:layout_marginTop="@dimen/dim_20dp"
+                            android:id="@+id/completeJourneyBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dim_50dp"
+                            android:background="@drawable/stop_location_update_btn"
+                            android:layout_marginLeft="@dimen/dim_20dp"
+                            android:layout_marginRight="@dimen/dim_20dp"
+                            android:text="Stop Journey" />
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </androidx.cardview.widget.CardView>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

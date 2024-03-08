@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="@dimen/dim_10dp">
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="match_parent"
+                   android:layout_height="@dimen/dim_100dp"
+                   android:orientation="vertical"
+                   android:gravity="center"
+                   android:background="@drawable/login_bg">
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:textColor="@color/black"
+                       android:text="Please login to continue..."
+                       android:textSize="@dimen/dim_18sp"
+                       android:gravity="center"></TextView>
+               </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/login_lyt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/dim_40dp"
+                    android:layout_marginBottom="@dimen/dim_40dp">
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dim_20dp"
+                        android:layout_marginLeft="@dimen/dim_20dp"
+                        android:focusable="true"
+                        app:startIconDrawable="@drawable/ic_user"
+                        android:focusableInTouchMode="true"
+                        tools:ignore="MissingConstraints">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/dvName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:hint="User Name"
+                            android:inputType="text"
+                            android:textSize="@dimen/dim_16sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dim_20dp"
+                        android:layout_marginLeft="@dimen/dim_20dp"
+                        android:layout_marginTop="@dimen/dim_15dp"
+                        app:startIconDrawable="@drawable/ic_lock"
+                        android:focusableInTouchMode="true"
+                        app:passwordToggleEnabled="true"
+                        tools:ignore="MissingConstraints">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/dvPassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:hint="Password"
+                            android:inputType="textPassword"
+                            android:textSize="@dimen/dim_16sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:id="@+id/forgotPassword"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Forgot Password"
+                        android:layout_marginLeft="@dimen/dim_20dp"
+                        android:layout_marginRight="@dimen/dim_20dp"
+                        android:textSize="@dimen/dim_16sp"
+                        android:layout_marginTop="@dimen/dim_8dp"></TextView>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_marginTop="@dimen/dim_20dp"
+                        android:id="@+id/loginBtn"
+                        android:layout_width="match_parent"
+                        android:layout_marginLeft="@dimen/dim_20dp"
+                        android:layout_marginRight="@dimen/dim_20dp"
+                        android:layout_height="@dimen/dim_50dp"
+                        android:background="@drawable/btn_bg"
+                        android:layout_marginBottom="@dimen/dim_30dp"
+                        android:text="Login"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/phoneNoLyt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/dim_40dp"
+                    android:layout_marginBottom="@dimen/dim_40dp"
+                    android:visibility="gone">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dim_20dp"
+                        android:layout_marginLeft="@dimen/dim_20dp"
+                        android:focusable="true"
+                        app:startIconDrawable="@drawable/ic_phone"
+                        android:focusableInTouchMode="true"
+                        app:prefixText="+91"
+                        tools:ignore="MissingConstraints">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/dvPhone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:hint="Phone Number"
+                            android:inputType="number"
+                            android:textSize="@dimen/dim_16sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:id="@+id/loginNow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Login Now"
+                        android:layout_marginLeft="@dimen/dim_20dp"
+                        android:layout_marginRight="@dimen/dim_20dp"
+                        android:textSize="@dimen/dim_16sp"
+                        android:layout_marginTop="@dimen/dim_8dp"></TextView>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_marginTop="@dimen/dim_20dp"
+                        android:id="@+id/getOtpBtn"
+                        android:layout_width="match_parent"
+                        android:layout_marginLeft="@dimen/dim_20dp"
+                        android:layout_marginRight="@dimen/dim_20dp"
+                        android:layout_height="@dimen/dim_50dp"
+                        android:background="@drawable/btn_bg"
+                        android:layout_marginBottom="@dimen/dim_30dp"
+                        android:text="get opt"/>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/otp_lyt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/dim_20dp"
+                            android:orientation="horizontal">
+                            <EditText
+                                android:id="@+id/etC1"
+                                android:textColorHint="@color/colorPrimary"
+                                android:textColor="@color/colorPrimary"
+                                android:layout_width="@dimen/dim_40dp"
+                                android:layout_height="@dimen/dim_40dp"
+                                android:background="@drawable/marquee_bg"
+                                android:gravity="center"
+                                android:inputType="phone"
+                                android:textSize="@dimen/dim_18sp" />
+
+                            <EditText
+                                android:id="@+id/etC2"
+                                android:textColorHint="@color/colorPrimary"
+                                android:textColor="@color/colorPrimary"
+                                android:layout_width="@dimen/dim_40dp"
+                                android:layout_height="@dimen/dim_40dp"
+                                android:layout_marginLeft="@dimen/dim_6dp"
+                                android:background="@drawable/marquee_bg"
+                                android:ems="10"
+                                android:gravity="center"
+                                android:inputType="phone"
+                                android:textSize="@dimen/dim_18sp"
+                                />
+
+                            <EditText
+                                android:id="@+id/etC3"
+                                android:textColorHint="@color/colorPrimary"
+                                android:textColor="@color/colorPrimary"
+                                android:layout_width="@dimen/dim_40dp"
+                                android:layout_height="@dimen/dim_40dp"
+                                android:layout_marginLeft="@dimen/dim_6dp"
+                                android:background="@drawable/marquee_bg"
+                                android:ems="10"
+                                android:gravity="center"
+                                android:inputType="phone"
+                                android:textSize="@dimen/dim_18sp"
+                                />
+
+                            <EditText
+                                android:id="@+id/etC4"
+                                android:cursorVisible="true"
+                                android:textColorHint="@color/colorPrimary"
+                                android:textColor="@color/colorPrimary"
+                                android:layout_width="@dimen/dim_40dp"
+                                android:layout_height="@dimen/dim_40dp"
+                                android:layout_marginLeft="@dimen/dim_6dp"
+                                android:background="@drawable/marquee_bg"
+                                android:ems="10"
+                                android:gravity="center"
+                                android:inputType="phone"
+                                android:textSize="@dimen/dim_18sp"
+                                />
+
+                            <EditText
+                                android:id="@+id/etC5"
+                                android:textColorHint="@color/colorPrimary"
+                                android:textColor="@color/colorPrimary"
+                                android:layout_width="@dimen/dim_40dp"
+                                android:layout_height="@dimen/dim_40dp"
+                                android:layout_marginLeft="@dimen/dim_6dp"
+                                android:background="@drawable/marquee_bg"
+                                android:ems="10"
+                                android:gravity="center"
+                                android:inputType="phone"
+                                android:textSize="@dimen/dim_18sp"
+                                />
+
+                            <EditText
+                                android:id="@+id/etC6"
+                                android:textColorHint="@color/colorPrimary"
+                                android:textColor="@color/colorPrimary"
+                                android:layout_width="@dimen/dim_40dp"
+                                android:layout_height="@dimen/dim_40dp"
+                                android:layout_marginLeft="@dimen/dim_6dp"
+                                android:background="@drawable/marquee_bg"
+                                android:ems="10"
+                                android:gravity="center"
+                                android:inputType="phone"
+                                android:textSize="@dimen/dim_18sp"
+                                />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:layout_marginTop="@dimen/dim_20dp"
+                            android:id="@+id/verifyOtpBtn"
+                            android:layout_width="match_parent"
+                            android:layout_marginLeft="@dimen/dim_20dp"
+                            android:layout_marginRight="@dimen/dim_20dp"
+                            android:layout_height="@dimen/dim_50dp"
+                            android:background="@drawable/btn_bg"
+                            android:layout_marginBottom="@dimen/dim_30dp"
+                            android:text="Verify Otp"/>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/newPasswordLyt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dim_20dp"
+                        android:layout_marginLeft="@dimen/dim_20dp"
+                        android:layout_marginTop="@dimen/dim_20dp"
+                        app:startIconDrawable="@drawable/ic_lock"
+                        android:focusableInTouchMode="true"
+                        app:passwordToggleEnabled="true">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/dvNewPassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="New Password"
+                            android:ems="10"
+                            android:textSize="@dimen/dim_16sp"
+                            android:inputType="textPassword" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dim_20dp"
+                        android:layout_marginLeft="@dimen/dim_20dp"
+                        android:layout_marginTop="@dimen/dim_20dp"
+                        app:startIconDrawable="@drawable/ic_lock"
+                        android:focusableInTouchMode="true"
+                        app:passwordToggleEnabled="true">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/dvConfirmPassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="confirm password"
+                            android:ems="10"
+                            android:textSize="@dimen/dim_16sp"
+                            android:inputType="textPassword" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <Button
+                        android:id="@+id/changePassword"
+                        android:background="@drawable/btn_bg"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dim_55dp"
+                        android:layout_marginRight="@dimen/dim_20dp"
+                        android:layout_marginLeft="@dimen/dim_20dp"
+                        android:layout_marginTop="@dimen/dim_30dp"
+                        android:layout_marginBottom="@dimen/dim_30dp"
+                        android:text="Change Password" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.cardview.widget.CardView>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

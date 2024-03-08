@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/layout_background">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/dim_17sp"
+            android:id="@+id/noticeMessage"
+            android:justificationMode="inter_word"
+            android:lineSpacingExtra="0.5dp"
+            android:textColor="@color/black"/>
+    </ScrollView>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

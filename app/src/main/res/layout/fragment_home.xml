@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="@color/layout_background"
+    tools:context=".Fragments.HomeFragment">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/homeFragmentLyt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/dim_15dp"
+                android:layout_marginBottom="@dimen/dim_20dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dim_200dp"
+                    app:cardElevation="@dimen/dim_10dp"
+                    app:cardCornerRadius="@dimen/dim_10dp"
+                    android:layout_margin="@dimen/dim_10dp">
+                    <com.denzcoskun.imageslider.ImageSlider
+                        android:id="@+id/imageSlider"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:iss_period="1000"
+                        app:iss_auto_cycle="true"
+                        app:iss_delay="1000"
+                        app:iss_corner_radius="10"
+                        app:iss_title_background="@drawable/gradient"/>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/dim_10dp"
+                    android:layout_marginLeft="@dimen/dim_10dp"
+                    android:layout_marginTop="@dimen/dim_20dp"
+                    android:paddingLeft="@dimen/dim_20dp"
+                    android:paddingRight="@dimen/dim_20dp"
+                    android:paddingTop="@dimen/dim_12dp"
+                    android:paddingBottom="@dimen/dim_12dp"
+                    android:background="@drawable/marquee_bg"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/dim_19sp"
+                        android:layout_gravity="center"
+                        android:text="NOTICE"/>
+
+                    <androidx.viewpager.widget.ViewPager
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dim_140dp"
+                        android:layout_marginTop="@dimen/dim_10dp"
+                        android:id="@+id/viewPager"/>
+                    <com.tbuonomo.viewpagerdotsindicator.SpringDotsIndicator
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:id="@+id/dot"
+                        android:layout_marginTop="@dimen/dim_5dp"
+                        app:dotsColor="@color/colorPrimary"
+                        app:selectedDotColor="@color/colorSecondary"
+                        app:dotsSize="@dimen/dim_12dp"
+                        app:dotsSpacing="@dimen/dim_5dp"
+                        app:stiffness="300"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </ScrollView>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/shimmerLyt">
+        <include layout="@layout/home_fragment_shimmer_lyt"/>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+</FrameLayout>
